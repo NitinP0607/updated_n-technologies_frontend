@@ -218,6 +218,10 @@
     flex-direction: column;
     padding: 0px; 
   }
+  .services-section{
+    width: 100%;
+  }
+  
   .service-bottom-part-left {
     width: 100%;  
   }
@@ -235,8 +239,8 @@
     
   }
   .service{
-    max-width: 250px;
-    width: 100%;
+    max-width: 450px;
+   
   }
   .service img {
     height: 200px;
