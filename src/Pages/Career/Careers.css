@@ -105,15 +105,11 @@
 }
 
 .career-card a {
+  
   text-decoration: none;
-  position: relative;
-  bottom: 50;
-}
-
-.career-card a {
-  text-decoration: none;
-  position: relative;
-  bottom: 50;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .apply-btn {
@@ -147,12 +143,20 @@
   }
   .careers{
     padding: 0px;
+     flex-wrap: wrap;
+     justify-content: center;
    
   }
   .career-card{
     width: 100%;
+    max-width: 375px;
     padding: 15px;
     
+  }
+  .career-card a{
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
   }
 
 }
@@ -174,13 +178,17 @@
   }
   .careers{
     
-    justify-content: start;
-    gap: 20px;
+    gap: 10px;
    
   }
   .career-card{
     width: 100%;
-    max-width: 360px;
+    max-width: 380px;
+  }
+   .career-card a{
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
   }
 }
 @media (min-width: 1024px){
