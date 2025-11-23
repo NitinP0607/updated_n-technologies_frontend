@@ -1,6 +1,6 @@
 .services-main {
-  padding: 12rem 2rem;
-  max-width: 1200px;
+  padding: 190px 10px;
+  width: 100%;
   margin: auto;
   background-color: #ffffff;
   font-family: "Segoe UI", sans-serif;
@@ -9,9 +9,9 @@
 
 .services-main h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 45px;
   color: #0073e6;
-  margin-bottom: 2rem;
+  margin-bottom: 25px;
 }
 
 
@@ -22,30 +22,35 @@
 }
 
 .services-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 2rem;
-  align-items: stretch; /* Important */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1600px;
+  align-items: stretch;
+  /* Important */
 }
+
 .service {
-  width: 100%;
+  max-width: 350px;
   background-color: #f9f9f9;
   border-radius: 10px;
-  padding: 1rem;
-  padding: 1.5rem;
+  padding: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
+
 .service:hover {
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05); /* zoom in slightly */
+  transform: scale(1.05);
   cursor: pointer;
-} 
+}
 
 .service img {
   width: 100%;
@@ -56,8 +61,8 @@
   width: 100%;
   height: 160px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .service span {
@@ -90,32 +95,60 @@
   background-color: #005bb5;
 }
 
-/* Form Section */
-.form-container {
-  margin-top: 3rem;
+.service-bottom-part {
+  width: 100%;
+  display: flex;
   background-color: #f0f6ff;
-  padding: 2rem;
+  padding: 15px;
+}
+
+.service-bottom-part-left {
+  width: 50%;
+}
+
+/* Form Section */
+.service-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 10px;
+  padding: 10px;
   border-radius: 10px;
 }
 
-.form-container h2 {
+.service-form-container h2 {
   text-align: center;
   color: #0073e6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-bottom-part-left {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-bottom-part-left p {
+  padding: 10px;
+  line-height: 2.5;
 }
 
 .service-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: auto;
+  gap: 20px;
+  padding: 20px;
 }
 
 .service-form input,
 .service-form select,
 .service-form textarea {
-  padding: 0.8rem 1rem;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
@@ -141,6 +174,7 @@
 .service-form button:hover {
   background-color: #005bb5;
 }
+
 /* Full-screen overlay */
 .overlay {
   position: fixed;
@@ -173,32 +207,58 @@
 
 /* Responsive Adjustments */
 
-@media (max-width: 768px) {
-  .services-main h1 {
-    font-size: 2.2rem;
+@media (min-width: 350px) and (max-width: 767px) {
+  .services-main {
+    padding: 150px 10px;
   }
-
+  .services-main h1 {
+    font-size: 25px;
+  }
+  .service-bottom-part {
+    flex-direction: column;
+    padding: 0px; 
+  }
+  .service-bottom-part-left {
+    width: 100%;  
+  }
+  hr{
+    margin: 10px;
+  }
+  .service-form-container {
+    width: 100%;
+    padding: 0px;
+  }
   .form-container h2 {
     font-size: 1.6rem;
   }
-
   .services-section {
-    grid-template-columns: 1fr;
+    
   }
-
+  .service{
+    max-width: 250px;
+    width: 100%;
+  }
   .service img {
-
     height: 200px;
   }
 }
-@media screen and (max-width: 1080px){
+
+@media (min-width: 768px) and (max-width: 1023px) {
   .service img {
     height: 300px;
   }
-}
-@media screen and (max-width: 480px){
-  .service img {
-    height: 160px;
+  .service-bottom-part {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px;
+    
+  }
+  .service-bottom-part-left{
+    width: 100%;
+  }
+  .service-form-container {
+    width: 100%;
   }
 }
+
 

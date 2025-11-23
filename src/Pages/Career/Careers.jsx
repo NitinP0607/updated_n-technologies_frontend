@@ -33,6 +33,7 @@ const Careers = () => {
             <Link to={"/careers/web-internship"} className="apply-btn">
               Apply Now
             </Link>
+            <hr />
           </div>
           <div className="career-card">
             <h3>Backend Developer</h3>
@@ -52,6 +53,7 @@ const Careers = () => {
             <Link to={"/careers/backend-internship"} className="apply-btn">
               Apply Now
             </Link>
+             <hr />
           </div>
 
           <div className="career-card">
@@ -74,6 +76,7 @@ const Careers = () => {
             >
               Apply Now
             </Link>
+             <hr />
           </div>
         </div>
       </section>
@@ -98,6 +101,7 @@ const Careers = () => {
             <Link to={"/careers/dev-mode"} className="apply-btn">
               Apply Now
             </Link>
+             <hr />
           </div>
 
           <div className="career-card">
@@ -118,6 +122,7 @@ const Careers = () => {
             <Link to={"/careers/dev-mode"} className="apply-btn">
               Apply Now
             </Link>
+             <hr />
           </div>
           <div className="career-card">
             <h3>Software Developer </h3>
@@ -136,6 +141,7 @@ const Careers = () => {
             <Link to={"/careers/dev-mode"} className="apply-btn">
               Apply Now
             </Link>
+             <hr />
           </div>
         </div>
       </section>
@@ -160,6 +166,7 @@ const Careers = () => {
             <Link to={"/careers/customer-support-voice"} className="apply-btn">
               Apply Now
             </Link>
+             <hr />
           </div>
 
           <div className="career-card">
@@ -180,6 +187,7 @@ const Careers = () => {
             <Link to={"/careers/tech-support-voice"} className="apply-btn">
               Apply Now
             </Link>
+             <hr />
           </div>
 
           <div className="career-card">
@@ -203,6 +211,7 @@ const Careers = () => {
             >
               Apply Now
             </Link>
+             <hr />
           </div>
         </div>
       </section>

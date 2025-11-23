@@ -103,58 +103,73 @@ const Services = () => {
         </div>
       </div>
       <hr />
-      <div className="form-container">
-        <h2>Request a Service</h2>
-        <form className="service-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-          <select
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select a Service</option>
-            <option value="Frontend Development">Frontend Development</option>
-            <option value="Backend Development">Backend Development</option>
-            <option value="App Development">App Development</option>
-            <option value="Digital Marketing">Digital Marketing</option>
-            <option value="UI/UX Design">UI/UX Design</option>
-            <option value="Software Development">Software Development</option>
-          </select>
-          <textarea
-            name="message"
-            placeholder="Tell us about your project..."
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-          <button type="submit" disabled={loading}>
-            {loading ? "Submitting..." : "Submit Application"}
-          </button>
-        </form>
+      <div className="service-bottom-part">
+        <div className="service-bottom-part-left">
+          <p>At N-Technologies, we are committed to delivering modern, 
+            reliable, and fully customized web services that help businesses build a strong digital presence. 
+            Our expert team specializes in website development, responsive design, UI/UX enhancement, 
+            SEO optimization, and full-stack solutions tailored to meet your unique business needs. 
+            Whether you want to create a new website, redesign an existing one, or develop a complete 
+            web application, we combine creativity with advanced technology to deliver fast, secure, 
+            and user-friendly results. We understand that every business is different, 
+            which is why we take the time to understand your goals and offer solutions that truly add value. 
+            If you need assistance with any web-related project, simply fill out our Request a Service form. 
+            Share your requirements, and our team will promptly connect with you, discuss your needs, 
+            and guide you toward the best solution to help your business grow online.</p>
+        </div>
+        <div className="service-form-container">
+          <h2>Request a Service</h2>
+          <form className="service-form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+            <select
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select a Service</option>
+              <option value="Frontend Development">Frontend Development</option>
+              <option value="Backend Development">Backend Development</option>
+              <option value="App Development">App Development</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Software Development">Software Development</option>
+            </select>
+            <textarea
+              name="message"
+              placeholder="Tell us about your project..."
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+            <button type="submit" disabled={loading}>
+              {loading ? "Submitting..." : "Submit Application"}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
