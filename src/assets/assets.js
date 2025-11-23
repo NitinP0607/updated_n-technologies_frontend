@@ -29,7 +29,7 @@ import ashish_image from "./asish_digital.jpg";
 import ecommerce_1 from "./ecommerce1.jpg";
 import ecommerce_2 from "./ecommerce2.jpg";
 import foodDel_1 from "./foodDelivery.jpg";
-import foodDel_2 from "./foodDelivery2.jpg";
+import foodDel_2 from "./fooddelivery2.jpg";
 import vacationrental_1 from "./vacation rental_2.jpg";
 import vacationrental_2 from "./vacation rental_3.jpg"
 import doctor_1 from "./doctor.jpg"
