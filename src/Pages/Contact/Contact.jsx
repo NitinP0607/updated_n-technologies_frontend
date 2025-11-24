@@ -1,41 +1,72 @@
 import React from 'react'
 import "./Contact.css"
+import { assets } from '../../assets/assets'
 
 const Contact = () => {
+
+  const addressLink = () => {
+    window.open(
+      "https://www.google.com/maps?q=Near+Metro+Station+62,+B-51+Noida+Sector-62,+Gautam+Budhha+Nagar+201301",
+      "_blank"
+    );
+  };
+
+  // Email → open default email app
+  const sendMeail = () => {
+    window.location.href = "mailto:contact@n-technologies.in";
+  };
+
+  // Phone → Dialer open
+  const callOwner = () => {
+    window.location.href = "tel:+918795946166";
+  };
+
+  // Office hours → optional (calendar or just show alert)
+  const openMapLink = () => {
+    alert("Office Hours: Mon - Sat, 10:00 AM - 6:00 PM");
+  };
   return (
     <div className="contact-wrapper">
       <div className="header">
         <h1>Contact Us</h1>
         <p>
-          Welcome to <strong>N-Technologies</strong>.  
-          We provide innovative web solutions to help businesses grow.  
-          Whether you have a question, need support, or want to discuss a project,  
+          Welcome to <span>N-Technologies </span>
+          We provide innovative web solutions to help businesses grow.
+          Whether you have a question, need support, or want to discuss a project,
           we’re here to listen.
         </p>
       </div>
       <div className="contact-header">
-        <h1>Get in Touch</h1>
-        <p>We'd love to hear from you. Reach out to us with your queries or feedback.<br/>
-        We're here to help you succeed, Your idea our tehnology will enhance your business</p>
+        <h1>More About us</h1>
+        <div className="contact-header-info">
+          <p>We are currently operating from Noida, where our team works with dedication 
+            to deliver high-quality digital solutions to clients across India as well as in the United States. 
+            As part of our expansion plan, we are now constructing a new office in Kannauj. 
+            This upcoming facility will help us extend our capabilities, strengthen our workforce, 
+            and support more businesses with reliable and innovative technology services.
+
+            At N-Technologies, we believe that impactful results come from strong partnerships. 
+            Your ideas, vision, and business goals form the foundation of our work. 
+            When combined with our technical expertise, modern development practices, and commitment to 
+            excellence, they create powerful solutions that drive real growth.
+
+            Whether you are a startup, a growing company, or an established enterprise in India or the US, 
+            our mission is to turn your vision into reality. 
+            Your idea and our technology together create a pathway to innovation, efficiency, 
+            and long-term success.</p>
+          <img src={assets.contact_image} alt="not loading" />
+        </div>
       </div>
-      <div className="quotes">
-            <blockquote>
-              “The best way to predict the future is to create it.” <br />– Peter Drucker
-            </blockquote>
-            <blockquote>
-              “Success is not in what you have, but who you are.” <br />– Bo Bennett
-            </blockquote>
-            <blockquote>
-              “Technology like art is a soaring exercise of the human imagination.” <br />– Daniel Bell
-            </blockquote>
-          </div>
       <div className="contact-main">
         <div className="contact-info">
           <h2>N-Technologies</h2>
-          <p><strong>Address:</strong> 123 Near Primary School kachatipur, kannauj, Uttar Pradesh, India</p>
-          <p><strong>Email:</strong> contact@n-technologies.in</p>
-          <p><strong>Phone:</strong> +91-8795946166</p>
-          <p><strong>Office Hours:</strong> Mon - Sat, 10:00 AM - 6:00 PM</p>
+          <p onClick={addressLink}><img src={assets.address_icon} alt="" /> Near Metro station 62, B-51 Noida sector-62 , Gautam Bhuddha Nagar , 201301</p>
+          <hr />
+          <p onClick={sendMeail}><img src={assets.mail_icon} alt="" />contact@n-technologies.in</p>
+          <hr />
+          <p onClick={callOwner}><img src={assets.call_icon} alt="" /> +91-8795946166</p>
+          <hr />
+          <p onClick={openMapLink}><img src={assets.available_icon} alt="" /> Mon - Sat, 10:00 AM - 6:00 PM</p>
         </div>
 
         <div className="contact-map">

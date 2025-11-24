@@ -445,3 +445,39 @@
     border: none;
   }
 }
+
+/* Fade Up Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.9s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide Left */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.9s ease-out;
+}
+
+.slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide Right */
+.slide-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.9s ease-out;
+}
+
+.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}

@@ -1,14 +1,47 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./About.css";
 import { assets } from "../../assets/assets";
 
 
 
 const About = () => {
+    // Refs for animations
+    const introRef = useRef(null);
+    const specializeTitleRef = useRef(null);
+    const specializeCardsRef = useRef([]);   // ✅ YOU MISSED THIS
+    const missionRef = useRef(null);
+    const visionRef = useRef(null);
+    const quotesRef = useRef(null);
+    const teamCardsRef = useRef([]);
+
+    useEffect(() => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add("visible");
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    if (introRef.current) observer.observe(introRef.current);
+    if (specializeTitleRef.current) observer.observe(specializeTitleRef.current);
+    if (missionRef.current) observer.observe(missionRef.current);
+    if (visionRef.current) observer.observe(visionRef.current);
+    if (quotesRef.current) observer.observe(quotesRef.current);
+
+    // Specialize cards
+    specializeCardsRef.current.forEach((card) => card && observer.observe(card));
+
+    // Team cards
+    teamCardsRef.current.forEach((card) => card && observer.observe(card));
+}, []);
+
+
     return (
         <div className="about">
             <div className="who-we-are">
-                <section className="intro">
+                <section className="intro fade-up" ref={introRef}>
                     <h1>Who We Are</h1>
                     <p>
                         At <strong>N-Technologies</strong>, we are a team of passionate innovators, developers,
@@ -17,9 +50,9 @@ const About = () => {
                     </p>
                 </section>
                 <section className="specialize-info">
-                    <h2>We Specialize In</h2>
+                    <h2 className="fade-up" ref={specializeTitleRef}>We Specialize In</h2>
                     <div className="specialize-info-container">
-                        <div className="specialize-card">
+                        <div className="specialize-card fade-up" ref={(el) => (specializeCardsRef.current[0] = el)}>
                             <img src={assets.ecommerce_1} alt="E-commerce Website" />
                             <h3>E-Commerce Websites</h3>
                             <p>
@@ -28,7 +61,7 @@ const About = () => {
                             </p>
                         </div>
 
-                        <div className="specialize-card">
+                        <div className="specialize-card fade-up" ref={(el) => (specializeCardsRef.current[1] = el)}>
                             <img src={assets.foodDel_1} alt="Food Delivery Website" />
                             <h3>Food Delivery Websites</h3>
                             <p>
@@ -37,7 +70,7 @@ const About = () => {
                             </p>
                         </div>
 
-                        <div className="specialize-card">
+                        <div className="specialize-card fade-up" ref={(el) => (specializeCardsRef.current[2] = el)}>
                             <img src={assets.vacationrental_1} alt="Hotel Booking Website" />
                             <h3>Hotel Booking Websites</h3>
                             <p>
@@ -46,7 +79,7 @@ const About = () => {
                             </p>
                         </div>
 
-                        <div className="specialize-card">
+                        <div className="specialize-card fade-up" ref={(el) => (specializeCardsRef.current[3] = el)}>
                             <img src={assets.doctor_1} alt="Doctor Appointment Website" />
                             <h3>Doctor Appointment Websites</h3>
                             <p>
@@ -58,14 +91,14 @@ const About = () => {
                 </section>
 
                 <section className="mission-vision">
-                    <div className="mission">
+                    <div className="mission slide-left" ref={missionRef}>
                         <h2>Our Mission</h2>
                         <p>
                             To empower businesses and individuals through innovative
                             technology and design solutions that inspire, connect, and grow.
                         </p>
                     </div>
-                    <div className="vision">
+                    <div className="vision slide-right" ref={visionRef}>
                         <h2>Our Vision</h2>
                         <p>
                             To be a trusted global partner in digital transformation,
@@ -74,7 +107,7 @@ const About = () => {
                     </div>
                 </section>
 
-                <section className="quotes">
+                <section className="quotes fade-up" ref={quotesRef}>
                     <h2>What Drives Us</h2>
                     <blockquote>
                         "Technology is best when it brings people together." <br />– Matt
@@ -90,14 +123,14 @@ const About = () => {
                     </blockquote>
                 </section>
             </div>
-            <h1>Our Team</h1>
+            <h1 className="fade-up">Our Team</h1>
             <div className="about-section">
-                <h3>
+                <h3 className="fade-up">
                     We have teams who are expert in build your ideas and transform those
                     ideas into a real life bussiness
                 </h3>
                 <div className="teams">
-                    <div className="team">
+                    <div className="team fade-up" ref={(el) => (teamCardsRef.current[0] = el)}>
                         <h3>Prakriti Singh</h3>
                         <h4>Senior Manager</h4>
                         <hr />
@@ -113,7 +146,7 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="team">
+                    <div className="team fade-up" ref={(el) => (teamCardsRef.current[1] = el)}>
                         <h3>Ankit Rajput</h3>
                         <h4>Senior Software Developer</h4>
                         <hr />
@@ -128,7 +161,7 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="team">
+                    <div className="team fade-up" ref={(el) => (teamCardsRef.current[2] = el)}>
                         <h3>Sharad Rajput</h3>
                         <h4>Skilled Backend Developer</h4>
                         <hr />
@@ -144,7 +177,7 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="team">
+                    <div className="team fade-up" ref={(el) => (teamCardsRef.current[3] = el)}>
                         <h3>Akash Kumar</h3>
                         <h4>Social Media Manager</h4>
                         <hr />
@@ -158,7 +191,7 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="team">
+                    <div className="team fade-up" ref={(el) => (teamCardsRef.current[4] = el)}>
                         <h3>Ashish Diwakar</h3>
                         <h4>Digital Marketing Executive</h4>
                         <hr />

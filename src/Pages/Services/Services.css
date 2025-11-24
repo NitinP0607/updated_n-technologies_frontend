@@ -266,3 +266,74 @@
 }
 
 
+/* ANIMATION EFFECT */
+
+/* Fade up animation */
+.services-section,
+.card-animate,
+.slide-left,
+.slide-right {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+/* Cards slide-up animation */
+.card-animate {
+  transform: translateY(40px);
+}
+.card-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bottom Left slide */
+/* ------- TOP SERVICES SECTION ANIMATION ------- */
+.services-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.services-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Each Service Card animation */
+.service {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.9s ease-out;
+}
+
+.service.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ------- BOTTOM SECTION LEFT ------- */
+.service-bottom-part-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.9s ease-out;
+}
+
+.service-bottom-part-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* ------- BOTTOM SECTION RIGHT ------- */
+.service-form-container {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.9s ease-out;
+}
+
+.service-form-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+

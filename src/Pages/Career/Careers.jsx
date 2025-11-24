@@ -1,11 +1,34 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
 import "./Careers.css";
 import { Link } from "react-router-dom";
 
 const Careers = () => {
+
+   // Refs for animations
+  const headerRef = useRef(null);
+  const sectionRefs = useRef([]);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (headerRef.current) observer.observe(headerRef.current);
+
+    sectionRefs.current.forEach((sec) => sec && observer.observe(sec));
+
+    cardRefs.current.forEach((card) => card && observer.observe(card));
+  }, []);
+
   return (
     <div className="careers-container">
-      <div className="careers-header">
+      <div className="careers-header fade-up" ref={headerRef}>
         <h1>Join N-Technologies</h1>
         <p>
           Build your future with us. We’re looking for passionate talent to grow
@@ -13,10 +36,10 @@ const Careers = () => {
         </p>
       </div>
 
-      <section className="careers-section">
+      <section className="careers-section fade-up" ref={(el) => (sectionRefs.current[0] = el)}>
         <h2>🔹 Tech Internships</h2>
         <div className="careers">
-          <div className="career-card">
+          <div className="career-card fade-up" ref={(el) => (cardRefs.current[0] = el)}>
             <h3>Web Development Intern</h3>
             <p>
               <strong>Location:</strong> Remote
@@ -35,7 +58,7 @@ const Careers = () => {
             </Link>
             <hr />
           </div>
-          <div className="career-card">
+          <div className="career-card" ref={(el) => (cardRefs.current[1] = el)}>
             <h3>Backend Developer</h3>
             <p>
               <strong>Location:</strong> Remote
@@ -56,7 +79,7 @@ const Careers = () => {
              <hr />
           </div>
 
-          <div className="career-card">
+          <div className="career-card" ref={(el) => (cardRefs.current[2] = el)}>
             <h3>Digital Marketing Intern</h3>
             <p>
               <strong>Location:</strong> Remote
@@ -81,10 +104,10 @@ const Careers = () => {
         </div>
       </section>
 
-      <section className="careers-section">
+      <section className="careers-section fade-up" ref={(el) => (sectionRefs.current[1] = el)}>
         <h2>🔹 Tech Job Openings</h2>
         <div className="careers">
-          <div className="career-card">
+          <div className="career-card fade-up" ref={(el) => (cardRefs.current[3] = el)}>
             <h3>Frontend Developer (React)</h3>
             <p>
               <strong>Location:</strong> Hybrid - Kanpur / Remote
@@ -104,7 +127,7 @@ const Careers = () => {
              <hr />
           </div>
 
-          <div className="career-card">
+          <div className="career-card fade-up" ref={(el) => (cardRefs.current[4] = el)}>
             <h3>Backend Developer (Node.js)</h3>
             <p>
               <strong>Location:</strong> Remote
@@ -124,7 +147,7 @@ const Careers = () => {
             </Link>
              <hr />
           </div>
-          <div className="career-card">
+          <div className="career-card fade-up" ref={(el) => (cardRefs.current[5] = el)}>
             <h3>Software Developer </h3>
             <p>
               <strong>Location:</strong> Remote
@@ -145,10 +168,10 @@ const Careers = () => {
           </div>
         </div>
       </section>
-      <section className="careers-section">
+      <section className="careers-section fade-up" ref={(el) => (sectionRefs.current[2] = el)}>
         <h2>🔹 BPO Job Openings</h2> 
         <div className="careers">
-          <div className="career-card">
+          <div className="career-card fade-up" ref={(el) => (cardRefs.current[6] = el)}>
             <h3>Customer Support Executive</h3> 
             <p>
               <strong>Location:</strong> On-site – Noida
@@ -169,7 +192,7 @@ const Careers = () => {
              <hr />
           </div>
 
-          <div className="career-card">
+          <div className="career-card fade-up" ref={(el) => (cardRefs.current[7] = el)}>
             <h3>Technical Support Executive</h3>
             <p>
               <strong>Location:</strong> On-site – Noida
@@ -190,7 +213,8 @@ const Careers = () => {
              <hr />
           </div>
 
-          <div className="career-card">
+          <div className="career-card" ref={(el) => (cardRefs.current[8] = el)}>
+             <hr />
             <h3>Customer Support Executive – Non-Voice</h3>
             <p>
               <strong>Location:</strong> On-site – Noida
@@ -211,7 +235,6 @@ const Careers = () => {
             >
               Apply Now
             </Link>
-             <hr />
           </div>
         </div>
       </section>

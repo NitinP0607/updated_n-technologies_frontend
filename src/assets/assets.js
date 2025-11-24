@@ -2,10 +2,13 @@
 import address_icon from "./address.png";
 import facebook_icon from "./facebook-media.png";
 import instagram_icon from "./instagram.png";
+import mail_icon from "./mail.png"
 import linkedin_icon from "./linkedin.png";
 import logo from "./logo.png";
 import banner from "./baner.jpg"
-
+import call_icon from "./phone-call.png"
+import available_icon from "./available.png"
+import contact_image from "./contact_us_image.jpg"
 //Services Images
 
 import frontend_image from "./frontend.png";
@@ -43,7 +46,11 @@ export const assets = {
     facebook_icon,
     instagram_icon,
     linkedin_icon,
+    mail_icon,
+    call_icon,
+    available_icon,
     logo,
+    contact_image,
     frontend_image,
     backend_image,
     appdevelopment_image,
