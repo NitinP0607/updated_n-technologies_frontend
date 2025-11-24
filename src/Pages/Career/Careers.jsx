@@ -58,7 +58,7 @@ const Careers = () => {
             </Link>
             <hr />
           </div>
-          <div className="career-card" ref={(el) => (cardRefs.current[1] = el)}>
+          <div className="career-card fade-up" ref={(el) => (cardRefs.current[1] = el)}>
             <h3>Backend Developer</h3>
             <p>
               <strong>Location:</strong> Remote
@@ -79,7 +79,7 @@ const Careers = () => {
              <hr />
           </div>
 
-          <div className="career-card" ref={(el) => (cardRefs.current[2] = el)}>
+          <div className="career-card fade-up" ref={(el) => (cardRefs.current[2] = el)}>
             <h3>Digital Marketing Intern</h3>
             <p>
               <strong>Location:</strong> Remote
@@ -213,7 +213,7 @@ const Careers = () => {
              <hr />
           </div>
 
-          <div className="career-card" ref={(el) => (cardRefs.current[8] = el)}>
+          <div className="career-card fade-up" ref={(el) => (cardRefs.current[8] = el)}>
              <hr />
             <h3>Customer Support Executive – Non-Voice</h3>
             <p>
