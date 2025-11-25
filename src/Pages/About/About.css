@@ -1,5 +1,5 @@
 .about {
-  padding-top: 100px;
+  padding-top: 160px;
   background-color: rgb(240, 240, 240);
   min-height: 100vh;
   user-select: none;
@@ -8,7 +8,7 @@
 .who-we-are {
   width: 100%;
   margin: auto;
-  padding: 40px 20px;
+  padding: 10px 0px;
   font-family: "Segoe UI", sans-serif;
   line-height: 1.7;
   color: #333;
@@ -52,13 +52,14 @@
 .mission,
 .vision {
   flex: 1 1 50%;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
 }
 
 .intro h1 {
   font-size: 42px;
   display: flex;
+  padding-top: 20px;
   justify-content: center;
   align-items: center;
   color: #003366;
@@ -135,7 +136,7 @@
 /* Tablets */
 @media (max-width: 992px) {
   .specialize-info {
-    padding: 50px 15px;
+    padding: 20px 0px;
   }
 
   .specialize-info h2 {
@@ -360,7 +361,7 @@
 
   .team {
     width: 100%;
-    padding: 25px;
+    padding: 0px;
   }
 
   .visit-office h2 {

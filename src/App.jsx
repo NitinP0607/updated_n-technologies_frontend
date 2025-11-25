@@ -9,11 +9,14 @@ import Contact from './Pages/Contact/Contact'
 import FrontendReadMore from './Components/FrontendReadMore/FrontendReadMore'
 import BackendReadMore from './Components/BackendReadMore/BackendReadMore'
 import AppDevreadMore from './Components/AppDevelopementReadMore/AppDevreadMore'
+import Footer from './Pages/Footer/Footer'
+import ScrollToTop from './Pages/StartTopPage/ScrollToTop'
 
 const App = () => {
   return (
     <div>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/services' element={<Services />} />
@@ -24,6 +27,7 @@ const App = () => {
          <Route path='/services/backend-read-more' element={<BackendReadMore />} />
          <Route path='/services/appdevelopment-read-more' element={<AppDevreadMore />} />
       </Routes>
+      <Footer />
     </div>
   )
 }

@@ -123,7 +123,7 @@ const About = () => {
                     </blockquote>
                 </section>
             </div>
-            <h1 className="fade-up">Our Team</h1>
+            <h1>Our Team</h1>
             <div className="about-section">
                 <h3 className="fade-up">
                     We have teams who are expert in build your ideas and transform those

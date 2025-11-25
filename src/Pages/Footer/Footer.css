@@ -1,0 +1,177 @@
+/* FOOTER MAIN STYLES */
+.footer {
+  background: #001e3c;
+  color: #e7eef7;
+  padding: 50px 40px 20px;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* Smooth top gradient */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: radial-gradient(circle, rgba(0,102,204,0.25), transparent);
+  filter: blur(40px);
+}
+
+/* GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 35px;
+}
+
+/* Company Info */
+.footer-about h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #4dabff;
+}
+
+.footer-about p {
+  color: #c1c9d6;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social img {
+  width: 26px;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+/* Titles */
+.footer-links h3,
+.footer-services h3,
+.footer-contact h3 {
+  margin-bottom: 12px;
+  color: #4dabff;
+  font-size: 1.2rem;
+}
+
+/* Quick Links, Services */
+.footer-links ul,
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-services li {
+  margin: 10px 0;
+  cursor: pointer;
+  color: #d0d7e3;
+  transition: 0.3s;
+}
+
+.footer-links li:hover,
+.footer-services li:hover {
+  color: #4dabff;
+  transform: translateX(6px);
+}
+
+/* Contact */
+/* FOOTER CONTACT SECTION */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-contact h3 {
+  margin-bottom: 8px;
+  color: #4dabff;
+  font-size: 1.2rem;
+}
+
+/* Contact Row (p elements) */
+.footer-contact p {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  cursor: pointer;
+  color: #d6e2f0;
+  font-size: 16px;
+  padding: 0px 6px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.footer-contact p:hover {
+  
+  transform: translateX(6px);
+}
+
+/* Icons inside footer contact */
+.footer-contact p img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* makes icons white on dark footer */
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+
+/* Icon hover effect */
+.footer-contact p:hover img {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  color: #9fb1c7;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+.footer * {
+  animation: fadeIn 0.9s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .footer {
+    padding: 40px 20px 10px;
+  }
+  .footer-about h2 {
+    font-size: 1.4rem;
+  }
+}
