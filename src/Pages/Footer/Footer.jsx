@@ -40,9 +40,9 @@ const Footer = () => {
           </p>
 
           <div className="footer-social">
-            <img src={assets.facebook_icon} alt="facebook" />
-            <img src={assets.instagram_icon} alt="instagram" />
-            <img src={assets.linkedin_icon} alt="linkedin" />
+            <a href="https://www.facebook.com/100012794568093/"><img src={assets.facebook_icon} alt="facebook" /></a>
+            <a href="https://www.instagram.com/frontend_backend_hub"><img src={assets.instagram_icon} alt="instagram" /></a>
+            <a href="https://www.linkedin.com/in/n-technologies123/"><img src={assets.linkedin_icon} alt="linkedin" /></a>
           </div>
         </div>
 
