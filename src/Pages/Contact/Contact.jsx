@@ -47,7 +47,7 @@ const Contact = () => {
         <div className="contact-imgs">
           <img src={assets.payment_integration} alt="" />
           <div className="contact-imgs-title">
-            <p><b>Secure payment integration ensures safe, encrypted, 
+            <p><b>Secure payment integration ensures safe 
               and seamless online transactions through trusted gateways for user protection.</b></p>
           </div>
         </div>
