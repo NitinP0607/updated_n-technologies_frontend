@@ -35,9 +35,14 @@ import foodDel_1 from "./foodDelivery.jpg";
 import foodDel_2 from "./fooddelivery2.jpg";
 import vacationrental_1 from "./vacation rental_2.jpg";
 import vacationrental_2 from "./vacation rental_3.jpg"
-import doctor_1 from "./doctor.jpg"
+import doctor_1 from "./doctor.jpg";
 
+//contact pages Image
 
+import seo_freindly from "./SEO_freindly.jpg";
+import fast_scalable from "./fast_and_scable.jpg";
+import payment_integration from "./Secure_payment.jpg";
+import secure from "./Secure_1.jpg"
 
 
 
@@ -50,6 +55,10 @@ export const assets = {
     call_icon,
     available_icon,
     logo,
+    seo_freindly,
+    fast_scalable,
+    payment_integration,
+    secure,
     contact_image,
     frontend_image,
     backend_image,

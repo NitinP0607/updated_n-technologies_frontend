@@ -36,6 +36,36 @@ const Contact = () => {
           we’re here to listen.
         </p>
       </div>
+      <div className="header-images">
+        <div className="contact-imgs">
+          <img src={assets.secure} alt="" />
+          <div className="contact-imgs-title">
+            <p><b>Security of your server and data is our first 
+              priority, ensuring protection, reliability, and complete trust.</b></p>
+          </div>
+        </div>
+        <div className="contact-imgs">
+          <img src={assets.payment_integration} alt="" />
+          <div className="contact-imgs-title">
+            <p><b>Secure payment integration ensures safe, encrypted, 
+              and seamless online transactions through trusted gateways for user protection.</b></p>
+          </div>
+        </div>
+        <div className="contact-imgs">
+          <img src={assets.seo_freindly} alt="" />
+          <div className="contact-imgs-title">
+            <p><b>We create fast, responsive, SEO-friendly 
+              websites designed to boost visibility, ranking, traffic, and business growth.</b></p>
+          </div>
+        </div>
+        <div className="contact-imgs">
+          <img src={assets.fast_scalable} alt="" />
+          <div className="contact-imgs-title">
+            <p><b>Our solutions are fast and scalable, 
+              ensuring high performance, smooth growth, reliable results, and long-term stability.</b></p>
+          </div>
+        </div>
+      </div>
       <div className="contact-header">
         <h1>More About us</h1>
         <div className="contact-header-info">
@@ -68,7 +98,6 @@ const Contact = () => {
           <hr />
           <p onClick={openMapLink}><img src={assets.available_icon} alt="" /> Mon - Sat, 10:00 AM - 6:00 PM</p>
         </div>
-
         <div className="contact-map">
           <iframe
             title="N-Technologies Location"
