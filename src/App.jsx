@@ -6,11 +6,9 @@ import Services from './Pages/Services/Services'
 import About from './Pages/About/About'
 import Careers from './Pages/Career/Careers'
 import Contact from './Pages/Contact/Contact'
-import FrontendReadMore from './Components/FrontendReadMore/FrontendReadMore'
-import BackendReadMore from './Components/BackendReadMore/BackendReadMore'
-import AppDevreadMore from './Components/AppDevelopementReadMore/AppDevreadMore'
 import Footer from './Pages/Footer/Footer'
 import ScrollToTop from './Pages/StartTopPage/ScrollToTop'
+
 
 const App = () => {
   return (
@@ -23,9 +21,6 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/careers' element={<Careers />} />
          <Route path='/contact' element={<Contact />} />
-         <Route path='/services/frontend-read-more' element={<FrontendReadMore />} />
-         <Route path='/services/backend-read-more' element={<BackendReadMore />} />
-         <Route path='/services/appdevelopment-read-more' element={<AppDevreadMore />} />
       </Routes>
       <Footer />
     </div>

@@ -14,7 +14,7 @@ const Services = () => {
     message: "",
   });
 
-    const servicesSectionRef = useRef(null);
+  const servicesSectionRef = useRef(null);
   const serviceCardsRef = useRef([]);
   const bottomLeftRef = useRef(null);
   const bottomRightRef = useRef(null);
@@ -32,14 +32,14 @@ const Services = () => {
       { threshold: 0.2 }
     );
 
-    if (servicesSectionRef.current) observer.observe(servicesSectionRef.current);
+    if (servicesSectionRef.current)
+      observer.observe(servicesSectionRef.current);
 
     serviceCardsRef.current.forEach((card) => card && observer.observe(card));
 
     if (bottomLeftRef.current) observer.observe(bottomLeftRef.current);
     if (bottomRightRef.current) observer.observe(bottomRightRef.current);
   }, []);
-
 
   // Handle Input Change
   const handleChange = (e) => {
@@ -83,67 +83,157 @@ const Services = () => {
       )}
       <h1>Our Top Web Services</h1>
       <div className="services-section" ref={servicesSectionRef}>
-        <div className="service" ref={(el) => (serviceCardsRef.current[0] = el)}>
+        <div
+          className="service"
+          ref={(el) => (serviceCardsRef.current[0] = el)}
+        >
           <img src={assets.frontend_image} alt="frontend_deelopment" />
           <span className="frontend-service">Frontend Development</span>
           <p>
             We are top frontend team who helps to build your ideas in practical
             way
           </p>
-          <Link to={"/services/frontend-read-more"}>Read More</Link>
+          <Link
+            to=""
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("request-service")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Request
+          </Link>
         </div>
-        <div className="service" ref={(el) => (serviceCardsRef.current[1] = el)}>
+        <div
+          className="service"
+          ref={(el) => (serviceCardsRef.current[1] = el)}
+        >
           <img src={assets.backend_image} alt="backend_development" />
           <span className="frontend-service">Backend Development</span>
           <p>
             We have the team who have skills and experience in Backend
             developers.
           </p>
-          <Link to={"/services/backend-read-more"}>Read More</Link>
+          <Link
+            to=""
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("request-service")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Request
+          </Link>
         </div>
-        <div className="service" ref={(el) => (serviceCardsRef.current[2] = el)}>
+        <div
+          className="service"
+          ref={(el) => (serviceCardsRef.current[2] = el)}
+        >
           <img src={assets.appdevelopment_image} alt="frontend_deelopment" />
           <span className="frontend-service">App Development</span>
           <p>Teams who are expert in App Development</p>
-          <Link to={"/services/appdevelopment-read-more"}>Read More</Link>
+          <Link
+            to=""
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("request-service")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Request
+          </Link>
         </div>
-        <div className="service" ref={(el) => (serviceCardsRef.current[3] = el)}>
+        <div
+          className="service"
+          ref={(el) => (serviceCardsRef.current[3] = el)}
+        >
           <img src={assets.digitalmarketing_image} alt="frontend_deelopment" />
           <span className="frontend-service">Digital Marketing</span>
           <p>Digital Marketing Team helps you to grow your business</p>
-          <Link to={"/services/digital-marketing-read-more"}>Read More</Link>
+          <Link
+            to=""
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("request-service")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Request
+          </Link>
         </div>
-        <div className="service" ref={(el) => (serviceCardsRef.current[4] = el)}>
+        <div
+          className="service"
+          ref={(el) => (serviceCardsRef.current[4] = el)}
+        >
           <img src={assets.uiux_image} alt="frontend_deelopment" />
           <span className="frontend-service">UI/UX Design</span>
           <p>
             UX/UI Design are according to your needs and provide better
             expereince
           </p>
-          <Link to={"/services/ui-ux-read-more"}>Read More</Link>
+          <Link
+            to=""
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("request-service")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Request
+          </Link>
         </div>
-        <div className="service" ref={(el) => (serviceCardsRef.current[5] = el)}>
-          <img src={assets.softwaredevelopement_image} alt="frontend_deelopment" />
+        <div
+          className="service"
+          ref={(el) => (serviceCardsRef.current[5] = el)}
+        >
+          <img
+            src={assets.softwaredevelopement_image}
+            alt="frontend_deelopment"
+          />
           <span className="frontend-service">Software Development</span>
           <p>Helps you to build your software, which have your ideas</p>
-          <Link to={"/services/software-read-more"}>Read More</Link>
+          <Link
+            to=""
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("request-service")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Request
+          </Link>
         </div>
       </div>
       <hr />
-      <div className="service-bottom-part" >
+      <div className="service-bottom-part">
         <div className="service-bottom-part-left" ref={bottomLeftRef}>
-          <p>At N-Technologies, we are committed to delivering modern, 
-            reliable, and fully customized web services that help businesses build a strong digital presence. 
-            Our expert team specializes in website development, responsive design, UI/UX enhancement, 
-            SEO optimization, and full-stack solutions tailored to meet your unique business needs. 
-            Whether you want to create a new website, redesign an existing one, or develop a complete 
-            web application, we combine creativity with advanced technology to deliver fast, secure, 
-            and user-friendly results.
-            If you need assistance with any web-related project, simply fill out our Request a Service form. 
-            Share your requirements, and our team will promptly connect with you, discuss your needs, 
-            and guide you toward the best solution to help your business grow online.</p>
+          <p>
+            At N-Technologies, we are committed to delivering modern, reliable,
+            and fully customized web services that help businesses build a
+            strong digital presence. Our expert team specializes in website
+            development, responsive design, UI/UX enhancement, SEO optimization,
+            and full-stack solutions tailored to meet your unique business
+            needs. Whether you want to create a new website, redesign an
+            existing one, or develop a complete web application, we combine
+            creativity with advanced technology to deliver fast, secure, and
+            user-friendly results. If you need assistance with any web-related
+            project, simply fill out our Request a Service form. Share your
+            requirements, and our team will promptly connect with you, discuss
+            your needs, and guide you toward the best solution to help your
+            business grow online.
+          </p>
         </div>
-        <div className="service-form-container" ref={bottomRightRef}>
+        <div
+          className="service-form-container"
+          id="request-service"
+          ref={bottomRightRef}
+        >
           <h2>Request a Service</h2>
           <form className="service-form" onSubmit={handleSubmit}>
             <input
