@@ -121,7 +121,7 @@ const Careers = () => {
             <p>
               <strong>Requirements:</strong> ReactJS, Tailwind, Git, APIs
             </p>
-            <Link to={"/careers/dev-mode"} className="apply-btn">
+            <Link to={"/careers/frontend-job"} className="apply-btn">
               Apply Now
             </Link>
              <hr />
@@ -142,7 +142,7 @@ const Careers = () => {
               <strong>Requirements:</strong> Node.js, MongoDB, Express, REST
               APIs
             </p>
-            <Link to={"/careers/dev-mode"} className="apply-btn">
+            <Link to={"/careers/backend-job"} className="apply-btn">
               Apply Now
             </Link>
              <hr />
@@ -161,7 +161,7 @@ const Careers = () => {
             <p>
               <strong>Requirements:</strong> Software Development, Git, APIs
             </p>
-            <Link to={"/careers/dev-mode"} className="apply-btn">
+            <Link to={"/careers/no-vacancy"} className="apply-btn">
               Apply Now
             </Link>
              <hr />
@@ -186,7 +186,7 @@ const Careers = () => {
               <strong>Requirements:</strong> Good verbal communication,
               English/Hindi fluency, Basic computer skills
             </p>
-            <Link to={"/careers/customer-support-voice"} className="apply-btn">
+            <Link to={"/careers/no-vacancy"} className="apply-btn">
               Apply Now
             </Link>
              <hr />
@@ -207,7 +207,7 @@ const Careers = () => {
               <strong>Requirements:</strong> Basic tech knowledge, Good verbal
               communication, Troubleshooting skills
             </p>
-            <Link to={"/careers/tech-support-voice"} className="apply-btn">
+            <Link to={"/careers/no-vacancy"} className="apply-btn">
               Apply Now
             </Link>
              <hr />
@@ -230,7 +230,7 @@ const Careers = () => {
               communication
             </p>
             <Link
-              to={"/careers/customer-support-non-voice"}
+              to={"/careers/no-vacancy"}
               className="apply-btn"
             >
               Apply Now

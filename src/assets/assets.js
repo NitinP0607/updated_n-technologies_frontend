@@ -9,6 +9,7 @@ import banner from "./baner.jpg"
 import call_icon from "./phone-call.png"
 import available_icon from "./available.png"
 import contact_image from "./contact_us_image.jpg"
+import hiring_closed from "./hiring_closed.gif"
 //Services Images
 
 import frontend_image from "./frontend.png";
@@ -59,6 +60,7 @@ export const assets = {
     fast_scalable,
     payment_integration,
     secure,
+    hiring_closed,
     contact_image,
     frontend_image,
     backend_image,
