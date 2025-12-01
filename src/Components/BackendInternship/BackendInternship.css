@@ -98,15 +98,7 @@
   border: 1px solid #ccc;
 }
 
-.submit-btn {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 18px;
-  border-radius: 6px;
-  cursor: pointer;
-}
+
 
 .submit-btn:hover {
   background: #0056d2;
