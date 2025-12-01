@@ -14,11 +14,13 @@ import DigitalMarketingInternship from "./Components/DigitalMraketingInternship/
 import FrontendDeveloper from "./Components/FrontendDeveloperJob/FrontendDeveloperJob";
 import BackendDevJob from "./Components/BackendDevJob/BackendDevJob";
 import NoVacancy from "./Components/NoVacancy/NoVacancy";
+  import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   return (
     <div>
       <Navbar />
+      <ToastContainer />
       <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<Home />} />

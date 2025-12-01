@@ -1,9 +1,71 @@
 import React, { useState, useRef } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
 import "./FrontendDeveloperJob.css";
 
 const FrontendDeveloper = () => {
   const [showForm, setShowForm] = useState(false);
   const formRef = useRef(null);
+  const [loading, setLoading] = useState(false);
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    about: "",
+    resume: null,
+  });
+
+  const handleInput = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleFile = (e) => {
+    setForm({ ...form, resume: e.target.files[0] });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!form.resume) {
+      toast.error("Please upload your resume!");
+      return;
+    }
+
+    setLoading(true);
+
+    const formData = new FormData();
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("phone", form.phone);
+    formData.append("about", form.about);
+    formData.append("resume", form.resume);
+
+    try {
+      await axios.post(
+        "https://updated-n-technologies-backend.onrender.com/api/application/apply-jobs",
+        formData,
+        { headers: { "Content-Type": "multipart/form-data" } }
+      );
+
+      toast.success("Application submitted successfully!");
+
+      // Reset Form
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        about: "",
+        resume: null,
+      });
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to submit application. Try again!");
+    }
+
+    setLoading(false);
+  };
 
   const handleApplyClick = () => {
     setShowForm(true);
@@ -85,24 +147,26 @@ const FrontendDeveloper = () => {
         <div ref={formRef} className="frontend-form fade-in-up">
           <h3>Apply for Frontend Developer Role</h3>
 
-          <form className="form-box">
+          <form className="form-box" onSubmit={handleSubmit}>
 
             <label>Full Name</label>
-            <input type="text" placeholder="Enter your full name" required />
+            <input type="text" name="name" value={form.name} onChange={handleInput} placeholder="Enter your full name" required />
 
             <label>Email Address</label>
-            <input type="email" placeholder="Enter your email" required />
+            <input type="email" name="email" value={form.email} onChange={handleInput} placeholder="Enter your email" required />
 
             <label>Phone Number</label>
-            <input type="text" placeholder="Enter your phone number" required />
+            <input type="text" name="phone" value={form.phone} onChange={handleInput} placeholder="Enter your phone number" required />
 
             <label>Upload Resume</label>
-            <input type="file" accept=".pdf,.doc,.docx" required />
+            <input name="resume" onChange={handleFile} type="file" accept=".pdf,.doc,.docx" required />
 
             <label>Why should we hire you?</label>
-            <textarea placeholder="Tell us about your skills, experience & passion" />
+            <textarea name="about" value={form.about} onChange={handleInput} placeholder="Tell us about your skills, experience & passion" required/>
 
-            <button type="submit" className="submit-btn">Submit Application</button>
+             <button type="submit" className="submit-btn" disabled={loading}>
+              {loading ? <div className="loader"></div> : "Submit Application"}
+            </button>
           </form>
         </div>
       )}

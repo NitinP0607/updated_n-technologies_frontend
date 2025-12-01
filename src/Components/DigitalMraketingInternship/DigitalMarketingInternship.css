@@ -97,15 +97,26 @@
   border: 1px solid #ccc;
 }
 
-.submit-btn {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 18px;
-  border-radius: 6px;
-  cursor: pointer;
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 
 .submit-btn:hover {
   background: #0056d2;
